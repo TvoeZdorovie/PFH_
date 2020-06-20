@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="hi">Добрый день, {{user.name}}!</h1>
+<div class="main_cabinet">
+    <h1>Разделы</h1>
+    <div class="parts">
+
+        <div class="row">
+            <div class="col">
+                <div class="image"></div>
+                <div class="text">Расписание</div>
+            </div>
+            <div class="col">
+                <div class="image"></div>
+                <div class="text">Сделать пропуск</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="image"></div>
+                <div class="text">Записаться к врачу</div>
+            </div>
+            <div class="col">
+                <div class="image"></div>
+                <div class="text">Советы докторов</div>
+            </div>
+        </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,137 @@
+.form_login{
+    margin-top: 10vh;
+}
+
+.form_login form{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.hi{
+    text-align: center;
+}
+.form_login form *{
+    width: 35vw;
+}
+
+.form_login form h1{
+    text-align: center;
+}
+.reg_btn{
+    margin-top: 1rem;
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.reg_btn:hover{
+    background-color:azure;
+}
+
+.main_cabinet{
+    width :50vw;
+    margin-left: 30vw;
+
+}
+
+.main_cabinet h1{
+    padding-left: 14vw;
+    margin-bottom: 10vh;
+}
+
+.main_cabinet  .image{
+    width: 160px;
+    height: 160px;
+    background-color: #24C720;
+    border-radius: 50%;
+}
+
+.main_cabinet .row{
+    margin-top: 3vh;
+}
+.main_cabinet .col{
+    display: flex;
+}
+.main_cabinet .col .text {
+    padding-top: 10%;
+    padding-left: 10px;
+}
+
+.pretty_border{
+    position: absolute;
+    width: 100%;
+    left: 30;
+    z-index: -1;
+}
+.top_right{
+    position: absolute;
+    width:60vh;
+    height: 70vh;
+    border-top: 15px solid #24C720;
+    border-right: 15px solid #24C720;
+    
+}
+.bottom_left{
+    position: absolute;
+    width:658px;
+    height: 30vh;
+    border-bottom: 15px solid #24C720;
+    border-left: 15px solid #24C720;
+    
+}
+.pretty_border .row.bottom{
+    padding-top: 40vh;
+}
+.bottom_right{
+    
+    margin-top: 10vh;
+}
+/*
+.top_left{
+    position: relative;
+    top:0;
+    left:0;
+    z-index: -1 ;
+    width:700px;
+    height: 200px;
+    
+    
+}
+
+.top_left .first{  
+    position: absolute;
+    top:179px;
+    left:52px;
+}
+
+.top_left .second{  
+    position: absolute;
+    top:50px;
+    left:129px;
+}
+
+.top_left .third{  
+    position: absolute;
+    top:91px;
+    left:229px;
+}
+
+.top_left .fourth{  
+    position: absolute;
+    top:21px;
+    left:384px;
+}
+.bottom_left{
+    position: absolute;
+    width:658px;
+    height: 60vh;
+    border-bottom: 15px solid #24C720;
+    border-left: 15px solid #24C720;
+    top: 40vh;
+    left:63;
+}
+*/

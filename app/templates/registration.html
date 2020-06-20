@@ -1,0 +1,35 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for msg in get_flashed_messages() %}
+<div class="flash">{{msg}}</div>
+{% endfor %}
+<br>
+
+<div class="form_login">
+    
+<form action="" method="post" name="login">
+    <h1>Регистрация</h1>
+    {{form.hidden_tag()}}
+    
+    <label>Введите Эл.почту:</label> 
+        {{form.login(size=80)}}
+        {% for error in form.errors.openid %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    <label>Введите пароль:</label>
+        {{form.password(size=80)}}<br>
+    <label>Введите Имя:</label>
+        {{form.name(size=25)}}
+    
+    <p>{{form.remember_me}} Запомнить меня</p>
+    <input type="submit" value="Регистрация">
+
+    <a class="reg_btn" href="{{url_for('auth')}}">
+        Уже с нами? Войти
+    </a>
+</form>
+</div>
+{% endblock %}

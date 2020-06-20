@@ -1,0 +1,56 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>ТвоеЗдоровье.рф</title>
+    {% endif %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div> <a href="/index">Личный кабинет</a></div>
+    <div> <a href="/logout">Выйти</a></div>
+    <hr>
+
+    <div class="pretty_border">
+      <div class="row">
+        <div class="col">
+        <div class="top_left">
+          <img class="first" src="../static/img/c1.png" alt="">
+          <img class="second" src="../static/img/c2.png" alt="">
+          <img class="third" src="../static/img/c3.png" alt="">
+          <img class="fourth" src="../static/img/c4.png" alt="">
+        </div>
+        </div>
+        <div class="col-3"></div>
+        <div class="col">
+          <div class="top_right"></div>
+        </div>
+        </div>
+    
+        <div class="row bottom">
+
+
+            
+            <div class="col">
+              <div class="bottom_left"></div>
+            </div>
+            <div class="col-5"></div>
+            <div class="col">
+              <div class="bottom_right">
+                <img class="first" src="../static/img/c1.png" alt="">
+                <img class="second" src="../static/img/c2.png" alt="">
+                <img class="third" src="../static/img/c3.png" alt="">
+                <img class="fourth" src="../static/img/c4.png" alt="">
+              </div>
+              </div>
+           
+        </div>
+      </div>
+     
+    {% block content %}{% endblock %}
+
+    </div>  
+  </body>
+</html>
