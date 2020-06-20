@@ -28,7 +28,7 @@ def reg():
             flash('Проверьте адрес электронной почты')
             return redirect(url_for('reg'))
 
-        flash('Привет ' + form.login.data )    
+        #flash('Привет ' + form.login.data )    
         u = models.User(email=form.login.data , passwd=form.password.data,name=form.name.data, role=models.ROLE_USER)
         u.hash_password()
         db.session.add(u)
@@ -54,15 +54,16 @@ def auth():
 	        login_user(u, remember=form.remember_me.data)
 	        return redirect(url_for('index'))
 
-        flash('Что-то пошло не так , проверьте данные. Вы еще не с нами? Скорее регистрируйтесь !')
+        flash('Что-то пошло не так , проверьте данные')
         return redirect(url_for('auth'))
 
     return render_template('login.html', 
-        title = 'Sign In',
+        title = 'Войти',
         form = form,
         )
 
 @app.route('/logout')
 def logout():
+    flash("")
     logout_user()
     return redirect(url_for('auth'))

@@ -1,3 +1,10 @@
+.flash{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+   
+}
 .form_login{
     margin-top: 10vh;
 }
