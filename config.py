@@ -1,8 +1,7 @@
 import os
 
-# Обновить секретный ключ
 CSRF_ENABLED = True
-SECRET_KEY = 'dirty-little-secret-key'
+SECRET_KEY = '26dsjw82jm'
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
