@@ -8,13 +8,13 @@ def check_email(e_mail):
         return False
 
     domen = e_mail[e_mail.find('@')+1:]
-    
-   
     try:
         #check MX
-        answers = resolver.query(domain, 'MX')
+        answers = resolver.query(domen, 'MX')
+        for i in answers:
+            print(i)
         return True
-        
+
     except BaseException:
         return False
 
