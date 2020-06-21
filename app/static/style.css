@@ -97,6 +97,25 @@
     
     margin-top: 10vh;
 }
+
+.main_cabinet .parts  .image{
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.main_cabinet .parts  .image.first{
+    background-image: url("img/t1.png");
+}
+.main_cabinet .parts  .image.second{
+    background-image: url("img/t2.png");
+}
+.main_cabinet .parts  .image.third{
+    background-image: url("img/t3.png");
+}
+.main_cabinet .parts  .image.fourth{
+    background-image: url("img/t4.png");
+}
+
 /*
 .top_left{
     position: relative;

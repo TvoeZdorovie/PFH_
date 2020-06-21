@@ -9,15 +9,12 @@ def check_email(e_mail):
 
     domen = e_mail[e_mail.find('@')+1:]
     
-    b = 'http://'+ domen
+   
     try:
-        a = requests.get(b , timeout=3)
-        if not a:
-            #check MX
-            answers = resolver.query(domain, 'MX')
-            
-
+        #check MX
+        answers = resolver.query(domain, 'MX')
         return True
+        
     except BaseException:
         return False
 
