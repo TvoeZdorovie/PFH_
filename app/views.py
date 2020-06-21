@@ -17,7 +17,7 @@ def index():
     user = { 'name': current_user.name }
     return render_template("index.html",
         title = 'Кабинет',
-        user = user )
+        user = user)
 
 @app.route('/reg', methods = ['GET', 'POST'])
 def reg():
@@ -31,10 +31,14 @@ def reg():
         #flash('Привет ' + form.login.data )    
         u = models.User(email=form.login.data , passwd=form.password.data,name=form.name.data, role=models.ROLE_USER)
         u.hash_password()
-        db.session.add(u)
-        db.session.commit()
-        login_user(u, remember=form.remember_me.data)
-        return redirect(url_for('index'))
+        try:
+            db.session.add(u)
+            db.session.commit()
+            login_user(u, remember=form.remember_me.data)
+            return redirect(url_for('index'))
+        except:
+            flash('Такая почта уже зарегистрирована')
+            return redirect(url_for('reg'))
 
     return render_template('registration.html', 
         title = 'Регистрация',
@@ -62,8 +66,30 @@ def auth():
         form = form,
         )
 
-@app.route('/logout')
+@app.route('/logout', methods = ['GET', 'POST'])
 def logout():
     flash("")
     logout_user()
     return redirect(url_for('auth'))
+
+@app.route('/timesheet', methods = ['GET', 'POST'])
+def timesheet():
+    return redirect(url_for('plug'))
+
+@app.route('/takepass', methods = ['GET', 'POST'])
+def takepass():
+    return redirect(url_for('plug'))
+
+@app.route('/doctor', methods = ['GET', 'POST'])
+def doctor():
+    return redirect(url_for('plug')) 
+
+@app.route('/advice', methods = ['GET', 'POST'])
+def advice():
+    return redirect(url_for('plug'))    
+   
+
+#return redirect(url_for('auth'))
+@app.route('/plug', methods = ['GET'])
+def plug():
+    return render_template('plug.html')

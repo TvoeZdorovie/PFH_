@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1 class="plug_head">Скоро мы обязательно все починим , а пока послушайте музыку</h1>
+<div class="row">
+<div class="col-3"></div>
+<div class="col-6">
+<iframe class="plug_music" frameborder="0" src="https://music.yandex.ru/iframe/#playlist/music.partners/1883">
+Слушайте <a href='https://music.yandex.ru/users/music.partners/playlists/1883'>Песни</a> — <a href='https://music.yandex.ru/users/music.partners'>Музыкальная редакция</a> на Яндекс.Музыке
+</iframe>
+<script>
+
+    frame = document.querySelector('iframe')
+    console.log(frame.childNodes)
+
+</script>
+</div>
+<div class="col-3"></div>
+</div>
+{% endblock %}

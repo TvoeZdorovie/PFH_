@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col">
                 <div class="image first"></div>
-                <div class="text">Расписание</div>
+                <div class="text">Расписание</div> 
             </div>
             <div class="col">
                 <div class="image second"></div>
@@ -27,5 +27,21 @@
         </div>
 
 </div>
+
+<script>
+    links = [
+        '/timesheet' , 
+        '/takepass',
+        '/doctor',
+        '/advice'
+    ]
+    elems = document.querySelectorAll('.parts .col')
+    console.log(elems) 
+    for (let i=0 ; i<links.length ; i++ ){
+        elems[i].addEventListener('click', function () {
+            window.location.href = links[i];
+            });
+    }
+</script>
 
 {% endblock %}
